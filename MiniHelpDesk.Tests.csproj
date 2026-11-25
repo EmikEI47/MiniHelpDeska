@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	<TargetFramework>net10.0</TargetFramework>
+	<IsPackable>false</IsPackable>
+	<IsTestProject>true</IsTestProject>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1" />
+	<PackageReference Include="MSTest.TestAdapter" Version="4.2.3" />
+	<PackageReference Include="MSTest.TestFramework" Version="4.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+	<Compile Include="Domain\Ticket.cs" Link="Domain\Ticket.cs" />
+	<Compile Include="Domain\TicketOptions.cs" Link="Domain\TicketOptions.cs" />
+	<Compile Include="Domain\TicketValidationResult.cs" Link="Domain\TicketValidationResult.cs" />
+	<Compile Include="Domain\TicketValidator.cs" Link="Domain\TicketValidator.cs" />
+	<Compile Include="Application\CommandBus.cs" Link="Application\CommandBus.cs" />
+	<Compile Include="Application\Commands.cs" Link="Application\Commands.cs" />
+	<Compile Include="Application\TicketHandlers.cs" Link="Application\TicketHandlers.cs" />
+	<Compile Include="Infrastructure\InMemoryTicketRepository.cs" Link="Infrastructure\InMemoryTicketRepository.cs" />
+	<Compile Include="Infrastructure\ITicketRepository.cs" Link="Infrastructure\ITicketRepository.cs" />
+	<Compile Include="Tests\TicketLogicTests.cs" Link="Tests\TicketLogicTests.cs" />
+  </ItemGroup>
+</Project>
